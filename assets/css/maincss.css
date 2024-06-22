@@ -1,0 +1,266 @@
+
+body{
+    font-family: poppins;
+    margin: 0 0 0 0;
+}
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding:0;
+        overflow: hidden;
+        background-color: #212529;
+    }
+    li {
+        float: left;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        margin-right: 13px;
+      }
+      
+a{
+    color:white;
+}
+
+.topcontainer{
+    background-image: url("/images_logos/banner-bg.png");
+    height:620px;
+}
+
+.header {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
+    background-color: #212529;
+    color: white;
+    margin-left:400px;
+    margin-right:400px;
+    height: 64px;
+}
+
+.toplogo{
+    display: flex;
+    justify-content:center;
+    margin-top: 30px;
+}
+
+.topmenu{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.center{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    
+}
+.right{
+ display: flex;
+ justify-content: center;
+ width: 150px;
+ padding-left: 50px;
+}
+.hamburger{
+    padding-right:250px;
+    cursor: pointer;
+    padding-left: 50px; 
+    padding-right: 20px; 
+    display: flex; 
+    justify-content: center;
+}
+.search-bar{
+    flex:1;
+    border: none;
+    cursor: pointer;
+}
+.search-button{
+    background-color: orangered;
+    border: none;
+    cursor: pointer;
+}
+.cart{
+    height:25px;
+    cursor: pointer;
+    color:white;
+}
+.carttext{
+    color:white;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right:60px;
+}
+.text-top {
+    margin-top: 80px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    overflow: hidden; /* Hides overflowing content */
+}
+
+.text-center {
+    width: 900px;
+    animation: slide 5s linear infinite; /* Adjust timing and animation as needed */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-20%);
+    }
+    50% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+
+.dropbtn{
+    background-color: #212529;
+    color:white;
+    border:none;
+    height:40px;
+    width:150px;
+    border-radius:20px;
+}
+/* Midlle section CSS */
+.middle{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    height: 660px;
+}
+.fashion-clothes{
+    display: flex;
+    background-color: white;
+    border: 0.1px solid grey;
+    height:590px;
+    width:1100px;
+    justify-content:space-between;
+}
+/*black t shirt*/
+.cloth-left{
+    width:333px;
+
+}
+.top-fashion-text{
+    display: block;
+    margin-left: 120px;
+
+}
+.bottom-buynow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+.bottom-buynow:hover{
+    color: orangered;
+}
+
+.black-tshirt{
+    display:flex;
+    flex-direction:column;
+    
+}
+/*yellow t shirt*/
+.cloth-center{
+    width:333px;
+}
+.yellow-tshirt{
+    display: flex;
+    height:410px
+}
+
+
+/*red women scart*/
+.cloth-right{
+    width:333px
+}
+.women-scart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 410px;
+}
+
+/* Electronic items */
+.electronic-items{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    height: 550px;
+}
+.items-container{
+    display: flex;
+    background-color: white;
+    border: 0.1px solid grey;
+    height:590px;
+    width:1100px;
+    justify-content:space-between;
+}
+/*laptop*/
+.item-left{
+    width:333px;
+
+}
+.top-text{
+    display: block;
+    margin-left: 120px;
+
+}
+.buynow-electronics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+.buynow-electronics:hover{
+    color: orangered;
+}
+
+.laptop{
+    display:flex;
+    flex-direction:column;
+    height:fit-content;
+    
+}
+/*Mobile-phones*/
+.electronics-center{
+    width:333px;
+}
+.mobile{
+    display: flex;
+    height:290px;
+}
+
+
+/*computer*/
+.computer{
+    width:333px
+}
+.computer-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height:fit-content;
+}

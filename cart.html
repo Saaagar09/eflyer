@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* Style for the shopping cart */
+        .cart {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .cart h2 {
+            margin-top: 0;
+        }
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cart-item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            color: green;
+        }
+        /*home button */
+.home-button {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.home-button:active,
+.home-button:hover {
+  outline: 0;
+}
+
+.home-button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.home-button:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .home-button {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+    </style>
+</head>
+  <body style="background-color: lightcyan;">
+      <a href="/"><button class="home-button" role="button"><span class="text">Home</span></button>
+      </a>
+      <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul class="cart-items" id="cart-items">
+          <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p>Total: <span id="total">0.00</span></p>
+      </div>
+
+      <script src="/assets/js/script.js"></script>
+
+      <script>
+            const cartItemsElement = document.getElementById('cart-items');
+            const totalElement = document.getElementById('total');
+
+            // check if cartitems element is present in html or not 
+            if(cartItemsElement){
+                cartItemsElement.innerHTML = '';
+              
+                let total = 0;
+
+                let dataStore = window.localStorage.getItem("mywebsite_datastore");
+
+                if(dataStore){
+                    dataStore = JSON.parse(dataStore);
+                }else{
+                    // re init datastore
+                    initStore();
+                }
+                
+                Array.from(dataStore.cart)?.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('cart-item');
+                    listItem.innerHTML = `<span class="item-name">${item.name}</span>: <span class="item-price">₹${item.price.toFixed(2)}</span>`;
+                    cartItemsElement.appendChild(listItem);
+                    total += item.price;
+                });
+
+                totalElement.textContent = total.toFixed(2);
+            }
+      </script>
+  </body>
+</html>
