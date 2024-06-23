@@ -27,7 +27,7 @@ a{
 }
 
 .topcontainer{
-    background-image: url("/images_logos/banner-bg.png");
+    background-image: url("https://raw.githubusercontent.com/Saaagar09/eflyer/deda30874c3c72381f3b58bc404840e627d2f55f/images_logos/banner-bg.png");
     height:620px;
 }
 
