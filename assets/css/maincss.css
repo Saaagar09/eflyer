@@ -264,30 +264,3 @@ a{
     justify-content: center;
     height:fit-content;
 }
-
-
-/* ==== Responsive Layout (basic mobile view) ====*/
-@media only screen and (max-width: 768px) {
-  .fashion-clothes, .items-container {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .fashion-clothes > div,
-  .items-container > div {
-    width: 100%;
-  }
-
-  .text-top {
-    font-size: 40px;
-  }
-
-  .header {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .topmenu {
-    flex-direction: column;
-  }
-}
