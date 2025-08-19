@@ -1,266 +1,155 @@
+<!DOCTYPE html>
+<html>
 
-body{
-    font-family: poppins;
-    margin: 0 0 0 0;
-}
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding:0;
-        overflow: hidden;
-        background-color: #212529;
-    }
-    li {
-        float: left;
-      }
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 16px;
-        text-decoration: none;
-        margin-right: 13px;
-      }
-      
-a{
-    color:white;
-}
+<head>
+    <title> Eflyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="assets/css/maincss.css">
+    <link rel="stylesheet" href="assets/css/sidemenu.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+</head>
 
-.topcontainer{
-    background-image: url("https://raw.githubusercontent.com/Saaagar09/eflyer/deda30874c3c72381f3b58bc404840e627d2f55f/images_logos/banner-bg.png");
-    height:620px;
-}
+<body style="margin-bottom: 100px;">
+    <!-- This is Top container containing Background img and header-->
+    <div class="topcontainer">
+        <!--This is the header section-->
+        <div class="header">
+            <ul>
+                <li><a href="#"> Best Sellers </a></li>
+                <li><a href="#"> Gift Ideas</a></li>
+                <li><a href="#"> New Releases</a></li>
+                <li><a href="#">Today's Deals</a></li>
+                <li><a href="#"> Customer Service</a></li>
+            </ul>
+        </div>
 
-.header {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
-    clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
-    background-color: #212529;
-    color: white;
-    margin-left:400px;
-    margin-right:400px;
-    height: 64px;
-}
+        <div class="toplogo"> <img src="images_logos/logo.png"> </div>
+        <!--main div -->
+        <div class="topmenu">
+            <!--sidebar-->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            <!--left div-->
+            <div class="hamburger" onclick="openNav()">
+                <img src="images_logos/toggle-icon.png">
+            </div>
+            <!--center div-->
+            <div class="center">
+                <input class="search-bar" type="text" placeholder="Search here">
+                <button class="search-button"><img src="images_logos/search-icon.png"></button>
+            </div>
+            <!--right div-->
+            <div class="right">
+                <a href="cart.html">
+                <div> <img class="cart" src="images_logos/cart.png"> </div></a>
+                <a href="cart.html"><div class="carttext"> CART</div></a>
+            </div>
+        </div>
+        <div class="text-top">
+    <div class="text-center">Get start Your Favourite Shopping</div>
+</div>
 
-.toplogo{
-    display: flex;
-    justify-content:center;
-    margin-top: 30px;
-}
+    </div>
+    <!--Men and women fashion-->
+    <div class="middle">
+        <div>
+            <h2>MEN and WOMEN FASHION</h2>
+        </div>
+        <div class="fashion-clothes">
+            <!--left-->
+            <div class="cloth-left">
+                <h4 class="top-fashion-text"> Mens Tshirt</h4>
+                <h3 style="display: flex; justify-content:center; color: orangered;">&#8377;400</h3>
+                <div class="black-tshirt">
+                    <img src="images_logos/men-Tshirt.jpg">
+                </div>
+                <div class="bottom-buynow" onclick="addToCart('Mens Tshirt', 400)">
+                    Buy now
+                </div>
+            </div>
+            <!--center-->
+            <div class="cloth-center">
+                <h4 class="top-fashion-text"> Mens Tshirt</h4>
+                <h3 style="display: flex; justify-content:center; color: orangered;">&#8377;350</h3>
+                <div class="yellow-tshirt">
+                    <img src="images_logos/tshirt-img.png">
+                </div>
+                <div class="bottom-buynow">
+                    Buy now
+                </div>
+            </div>
+            <!--right-->
+            <div class="cloth-right">
+                <h4 class="top-fashion-text">Woman Scart</h4>
+                <h3 style="display: flex; justify-content:center; color: orangered;">&#8377;800</h3>
+                <div class="women-scart">
+                    <img src="images_logos/women-clothes-img.png">
+                </div>
+                <div class="bottom-buynow">
+                    Buy now
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Elecctronics Items-->
+    <div class="electronic-items">
+        <div>
+            <h2>Electrnoic items</h2>
+        </div>
+        <div class="items-container">
+            <!--left-->
+            <div class="item-left">
+                <h4 class="top-text">Laptop</h4>
+                <h3 style="display: flex; justify-content:center; color: orangered;">&#8377;40,000</h3>
+                <div class="laptop">
+                    <img src="images_logos/laptop-img.png">
+                </div>
+                <div class="buynow-electronics">
+                    Buy now
+                </div>
+            </div>
+            <!--center-->
+            <div class="electronics-center">
+                <h4 class="top-fashion-text">iphone 15 pro max</h4>
+                <h3 style="display: flex; justify-content:center; color: orangered;">&#8377;150,000</h3>
+                <div class="mobile">
+                    <img  src="images_logos/iphone-15-pro-max.png">
+                </div>
+                <div class="bottom-buynow">
+                    Buy now
+                </div>
+            </div>
+            <!--right-->
+            <div class="computer">
+                <h4 class="top-fashion-text">Build your pc</h4>
+                <h3 style="display: flex; justify-content:center; color: orangered;">&#8377;30,000</h3>
+                <div class="computer-1">
+                    <img src="images_logos/computer-img.png">
+                </div>
+                <div class="bottom-buynow">
+                    Buy now
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
 
-.topmenu{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-}
-.center{
-    display: flex;
-    flex:1;
-    justify-content: center;
-    
-}
-.right{
- display: flex;
- justify-content: center;
- width: 150px;
- padding-left: 50px;
-}
-.hamburger{
-    padding-right:250px;
-    cursor: pointer;
-    padding-left: 50px; 
-    padding-right: 20px; 
-    display: flex; 
-    justify-content: center;
-}
-.search-bar{
-    flex:1;
-    border: none;
-    cursor: pointer;
-}
-.search-button{
-    background-color: orangered;
-    border: none;
-    cursor: pointer;
-}
-.cart{
-    height:25px;
-    cursor: pointer;
-    color:white;
-}
-.carttext{
-    color:white;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-right:60px;
-}
-.text-top {
-    margin-top: 80px;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    font-size: 80px;
-    overflow: hidden; /* Hides overflowing content */
-}
+    <!-- JS FILES -->
+    <script src="assets/js/script.js"></script>
+</body>
 
-.text-center {
-    width: 900px;
-    animation: slide 5s linear infinite; /* Adjust timing and animation as needed */
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(-20%);
-    }
-    50% {
-        transform: translateX(20%);
-    }
-    100% {
-        transform: translateX(-20%);
-    }
-}
-
-
-.dropbtn{
-    background-color: #212529;
-    color:white;
-    border:none;
-    height:40px;
-    width:150px;
-    border-radius:20px;
-}
-/* Midlle section CSS */
-.middle{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: center;
-    height: 660px;
-}
-.fashion-clothes{
-    display: flex;
-    background-color: white;
-    border: 0.1px solid grey;
-    height:590px;
-    width:1100px;
-    justify-content:space-between;
-}
-/*black t shirt*/
-.cloth-left{
-    width:333px;
-
-}
-.top-fashion-text{
-    display: block;
-    margin-left: 120px;
-
-}
-.bottom-buynow{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    cursor: pointer;
-    transform: scale(1.1);
-
-}
-.bottom-buynow:hover{
-    color: orangered;
-}
-
-.black-tshirt{
-    display:flex;
-    flex-direction:column;
-    
-}
-/*yellow t shirt*/
-.cloth-center{
-    width:333px;
-}
-.yellow-tshirt{
-    display: flex;
-    height:410px
-}
-
-
-/*red women scart*/
-.cloth-right{
-    width:333px
-}
-.women-scart{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 410px;
-}
-
-/* Electronic items */
-.electronic-items{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: center;
-    height: 550px;
-}
-.items-container{
-    display: flex;
-    background-color: white;
-    border: 0.1px solid grey;
-    height:590px;
-    width:1100px;
-    justify-content:space-between;
-}
-/*laptop*/
-.item-left{
-    width:333px;
-
-}
-.top-text{
-    display: block;
-    margin-left: 120px;
-
-}
-.buynow-electronics{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    cursor: pointer;
-    transform: scale(1.1);
-
-}
-.buynow-electronics:hover{
-    color: orangered;
-}
-
-.laptop{
-    display:flex;
-    flex-direction:column;
-    height:fit-content;
-    
-}
-/*Mobile-phones*/
-.electronics-center{
-    width:333px;
-}
-.mobile{
-    display: flex;
-    height:290px;
-}
-
-
-/*computer*/
-.computer{
-    width:333px
-}
-.computer-1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height:fit-content;
-}
+</html>
